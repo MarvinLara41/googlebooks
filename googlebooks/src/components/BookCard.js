@@ -8,7 +8,7 @@ const BookCard = (props) => {
             <div>
             <h2>{props.title}</h2>
             <h3>{props.author}</h3>
-            <p>{props.publishedDate}</p>
+            <p className="font">{props.publishedDate}</p>
             </div>
         </div>
     )
