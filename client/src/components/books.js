@@ -10,17 +10,13 @@ class Book extends Component {
         this.state= {
             book:[],
             searchField: '',
-            sort: ''
+            Save: [],
+
 
         }
     }
 
     //methods
-
-    handleSort = (e)=>{
-      this.setState({ searchField: e.target.value})
-    }
-
     handleSearch = (e) => {
         //this state will handle the the information entered in the search box. this 'event' must be entered to the search component to connect them.
         this.setState ({searchField: e.target.value})
@@ -36,21 +32,13 @@ class Book extends Component {
             })
     }
 
-
-   
-
-
-
     render(){
 
-
-    return (
-      <div>
-        
-        <Search searchBook={this.searchBook} handleSearch={this.handleSearch}
-          handleSort={this.handleSort}/>
-        <BookList book={this.state.book}/>
-      </div>
+      return (
+        <div>
+          <Search searchBook={this.searchBook} handleSearch={this.handleSearch}/>
+          <BookList book={this.state.book}/>
+        </div>
     );
     }
   }
